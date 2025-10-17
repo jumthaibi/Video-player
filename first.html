@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom video</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="cntr">
+        <input type="file" id="videoInput" accept="video/*">
+        <label for="videoInput" class="cust-btns">
+            <strong>Upload a video</strong>
+        </label>
+        <br><br><br>
+        <div class="container">
+            <video width="350px" id="video" poster="media\upload a video.gif"></video>
+            <br><br>
+            <input type="range" id="progress" value="1"><h2 id="time">00:00</h2>
+            <div class="btns">
+                <img src="btns\play.jpg" width="40" height="40" id="play" class="btn">
+            </div>
+        </div>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>

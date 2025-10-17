@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Preview Video</title>
+</head>
+<body style="text-align:center;">
+
+    <h2>Upload a Video</h2>
+    
+    <input type="file" id="videoInput" accept="video/*">
+    <br><br>
+
+    <video id="videoPreview" width="400" controls></video>
+
+    <script>
+        const input = document.getElementById("videoInput");
+        const preview = document.getElementById("videoPreview");
+
+        input.addEventListener("change", function() {
+        const file = this.files[0];
+        if (file) {
+            const url = URL.createObjectURL(file);
+            preview.src = url;
+        }
+        });
+    </script>
+
+</body>
+</html>
